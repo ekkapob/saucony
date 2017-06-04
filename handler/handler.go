@@ -40,10 +40,12 @@ func BaseTemplate(contentTemplateFile string, funcMap template.FuncMap) *templat
 
 func BaseFuncMap() template.FuncMap {
 	return template.FuncMap{
-		"contains": func(list []string, text string) bool {
+		"contains": func(list []string, text ...string) bool {
 			for _, item := range list {
-				if item == text {
-					return true
+				for _, t := range text {
+					if item == t {
+						return true
+					}
 				}
 			}
 			return false

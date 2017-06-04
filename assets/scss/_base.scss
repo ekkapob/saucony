@@ -188,6 +188,10 @@ a.underline {
   color: $blue100;
 }
 
+.tech-name {
+  display: flex;
+  align-items: center;
+}
 .tech-icon {
   width: 30px;
   height: 28px;
